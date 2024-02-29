@@ -6,14 +6,14 @@ const connection = require('./database/connection')
 const app = express()
 let PORT = process.env.PORT || 8080
 
-// app.use(cors(
-//     {
-//         origin: "https://aborayan.vercel.app",
-//         methods: ["POST", "GET", "PUT", "DELETE"],
-//         credentials: true
-//     }
-// ))
-app.use(cors())
+app.use(cors(
+    {
+        origin: "https://aborayan.vercel.app",
+        methods: ["POST", "GET", "PUT", "DELETE"],
+        credentials: true
+    }
+))
+// app.use(cors())
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
