@@ -11,8 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(cors(
     {
-        // origin: "https://aborayan.vercel.app",
-        origin: "",
+        origin: "https://aborayan.vercel.app",
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
